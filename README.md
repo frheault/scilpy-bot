@@ -1,16 +1,43 @@
-# Scil-Chatbot
+# Scilpy-Bot
 
 A chatbot to help you navigate the Scilpy library. This tool is designed to answer your questions about Scilpy, a Python library for diffusion MRI and tractography processing.
 
 ## Installation
 
-To install the Scilpy-Bot for development, clone the repository and install it in editable mode:
+To install the Scilpy-Bot for development, clone the repository and install the necessary requirements:
 
 ```bash
-git clone https://github.com/scilus/scil_chatbot.git
-cd scil_chatbot
-pip install -e .
+git clone https://github.com/scilus/scilpy-bot.git
+cd scilpy-bot
+pip install -r requirements.txt
 ```
+
+## API Key Setup
+
+This chatbot can be configured to use either Google's Gemini or OpenAI's ChatGPT models. Please select one and follow the instructions below.
+
+1.  **Get an API Key:**
+    *   **Google Gemini:** Obtain your API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    *   **OpenAI ChatGPT:** Get your API key from the [OpenAI Platform](https://platform.openai.com/api-keys).
+
+2.  **Set Environment Variable:**
+    You need to add your API key to your shell's configuration file (e.g., `.bashrc` or `.zshrc`).
+
+    *   For **Gemini**, add the following line:
+        ```bash
+        export GOOGLE_API_KEY="your_google_api_key"
+        ```
+    *   For **ChatGPT**, add the following line:
+        ```bash
+        export OPENAI_API_KEY="your_openai_api_key"
+        ```
+
+3.  **Apply Changes:**
+    To apply the changes, either restart your terminal or run:
+    ```bash
+    source ~/.bashrc
+    ```
+    *(Replace `~/.bashrc` with `~/.zshrc` if you are using Zsh.)*
 
 ## Dependencies
 
@@ -28,6 +55,11 @@ Once installed, you can start the chatbot by running:
 
 ```bash
 scil_chatbot
+```
+
+**Note:** Before the first run, you may need to generate the Scilpy documentation cache. If you see a `FileNotFoundError`, please run the following command:
+```bash
+scil_search_keywords --regenerate_help_files placeholder
 ```
 
 ## Tips for Interacting with the Chatbot
