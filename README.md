@@ -10,6 +10,7 @@ To install the Scilpy-Bot for development, clone the repository and install the 
 git clone https://github.com/scilus/scilpy-bot.git
 cd scilpy-bot
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ## API Key Setup

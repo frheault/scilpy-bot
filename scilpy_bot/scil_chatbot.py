@@ -145,6 +145,10 @@ def ask_gemini(user_input, context, chat_session):
 
 def chat_loop(model_name, context):
     """Interactive chat loop with conversation memory."""
+    print(f"{YELLOW}WARNING: This chatbot uses a Large Language Model (LLM). "
+          "The information provided may be inaccurate. "
+          "Always verify that the proposed script exists and read its --help "
+          f"before use.{RESET}")
     print(f"Starting {model_name} chat. Type 'exit' or 'quit' "
           "to end the session.")
     print("-" * 60)

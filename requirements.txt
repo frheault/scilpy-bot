@@ -1,3 +1,0 @@
-scilpy
-openai
-google-generativeai

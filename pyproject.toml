@@ -6,15 +6,20 @@ build-backend = "setuptools.build_meta"
 name = "scilpy-bot"
 version = "0.0.1"
 authors = [
-  { name="Example Author", email="author@example.com" },
+  { name="Francois Rheault", email="francois.m.rheault@usherbrooke.ca" },
 ]
-description = "A small example package"
+description = "A chatbot to help you find the right scilpy script."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10, <=3.12"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+]
+dependencies = [
+    "scilpy",
+    "openai",
+    "google-generativeai",
 ]
 
 [project.urls]
